@@ -1,0 +1,28 @@
+<!-- 객체를 생성하는 함수 -->
+<script>
+  function createStudent(이름, 과목, 국어, 영어, 수학, 과학) {
+    return {
+      이름: 이름,
+      과목: 과목,
+      국어: 국어,
+      영어: 영어,
+      수학: 수학,
+      과학: 과학,
+
+      getSum() { return this.국어 + this.영어 + this.수학 + this.과학 },
+      getAverage() { return this.getSum() / this.과목 },
+      toString() { return `${this.이름}\t${this.getSum()}\t${this.getAverage()}점\n` },
+    }
+  }
+
+  const students = []
+  students.push(createStudent('지훈', 4, 9, 14, 100, 34))
+  students.push(createStudent('무송', 4, 100, 80, 90, 80))
+
+  let output = '이름\t총점\t평균\n'
+  for (const student of students) {
+    output += (student.toString())
+  }
+  
+  console.log(output)
+</script>

@@ -1,0 +1,12 @@
+<!-- 예외 강제로 발생시키고 잡기 -->
+<script>
+  function devide(a, b) {
+    if (b === 0) {
+      throw '0으로는 나눌 수 없습니다.'
+    }
+    return a / b
+  }
+
+  console.log(devide(10, 2))
+  console.log(devide(10, 0))
+</script>

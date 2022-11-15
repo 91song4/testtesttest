@@ -1,0 +1,25 @@
+<!-- 게터(getter)와 세터(setter) 메소드 -->
+<script>
+  class Square {
+    #length
+
+    constructor(length) {
+      this.setLength(length)
+    }
+
+    setLength(length) {
+      if (length <= 0)
+        throw `길이는 0보다 커야 합니다.`
+      this.#length = length
+    }
+
+    getLength() { return this.#length }
+    getPerimeter() { return this.#length << 2 }
+    getArea() { return this.#length ** 2 }
+  }
+  const square = new Square(10)
+  console.log(`한 변의 길이는 ${square.getLength()}입니다.`)
+
+  //예외 발생시키기
+  square.setLength(-10)
+</script>

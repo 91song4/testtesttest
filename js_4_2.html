@@ -1,0 +1,14 @@
+<!-- 반복문 -->
+<script>
+  const pyramid = 15
+  let output = ''
+  for (let i = 0; i < pyramid; ++i) {
+    for (let k = 1; k < pyramid - i; ++k)
+      output += ' '
+    for (let j = 0; j < (i * 2) + 1; ++j)
+      output += '*'
+
+    output += '\n'
+  }
+  console.log(output)
+</script>

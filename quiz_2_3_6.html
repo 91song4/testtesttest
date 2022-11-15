@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 위의 문제들처럼 데이터를 입력받아 처리하고 출력하는 프로그램에는 어떤 것이 있는지 생각해 보고
+    // 3개 정도 적어보세요. 가능하면 직접 구현해 보세요.
+    const choose = 3
+
+    if (choose === 1) {
+      const meter = Number(prompt('m->km'))
+      const km = meter / 1000
+      alert(`${meter}m -> ${km}km`)
+    }
+    else if (choose === 2) {
+      const kilometer = Number(prompt('km->m'))
+      const meter = kilometer * 1000
+      alert(`${kilometer}km -> ${meter}m`)
+    }
+    else if (choose === 3) {
+      const won = Number(prompt('원 단위의 금액을 입력해주세요.'))
+      const dollar = won / 1207
+      alert(dollar)
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

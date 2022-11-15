@@ -1,0 +1,54 @@
+<script>
+  //1번
+  {
+    const max = (arr) => {
+      let output = arr[0]
+      for (const ele of arr)
+        if (output < ele)
+          output = ele
+
+      return output
+    }
+
+    console.log(max([1, 2, 3, 4]))
+  }
+
+  //2번
+  {
+    const max = (...arr) => {
+      let output = arr[0]
+      for (const ele of arr)
+        if (output < ele)
+          output = ele
+
+      return output
+    }
+
+    console.log(max(1, 2, 3, 4))
+  }
+
+  //3번
+  {
+    const max = (arrA, ...arrB) => {
+      let output
+      let items
+
+      if (Array.isArray(arrA)) {
+        output = arrA[0]
+        items = arrA
+      } else if (typeof(arrA) === 'number') {
+        output = arrA
+        items = arrB
+      }
+
+      for (const item of items) {
+        if (output < item)
+          output = item
+      }
+
+      return output
+    }
+    console.log(`max(array): ${max([1, 2, 3, 4])}`)
+    console.log(`max(number): ${max(1, 2, 3, 4)}`)
+  }
+</script>

@@ -1,0 +1,24 @@
+<!-- 객체를 처리하는 함수(1) -->
+<script>
+  const students = []
+  students.push({ 이름: '지훈', 국어: 9, 영어: 14, 수학: 100, 과학: 34 })
+  students.push({ 이름: '무송', 국어: 100, 영어: 80, 수학: 90, 과학: 80 })
+
+  function getSumOf(student) {
+    return student.국어 + student.영어 + student.수학 + student.과학
+  }
+
+  function getAverageOf(student) {
+    return getSumOf(student) / (Object.keys(student).length - 1)
+  }
+
+
+  let output = '이름\t총점\t평균\n'
+  for (const s of students) {
+    const sum = getSumOf(s)
+    const average = getAverageOf(s)
+    output += `${s.이름}\t${sum}점\t${average}점\n`
+  }
+
+  console.log(output)
+</script>

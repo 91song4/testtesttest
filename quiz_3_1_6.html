@@ -1,0 +1,19 @@
+<script>
+  const a = Number(prompt('월을 입력해주세요.', ''))
+  const winter = [12, 1, 2]
+  const spring = [3, 4, 5]
+  const summer = [6, 7, 8]
+  const autumn = [9, 10, 11]
+  if (winter.includes(a))
+    alert('겨울 입니다.')
+  else if (spring.includes(a))
+    alert('봄 입니다.')
+  else if (summer.includes(a))
+    alert('여름 입니다.')
+  else if(autumn.includes(a))
+    alert('가을 입니다.')
+    else{
+      alert('정확히 입력해주세요.')
+      window.location.reload()
+    }
+</script>

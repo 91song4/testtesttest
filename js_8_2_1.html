@@ -1,0 +1,12 @@
+<!-- 예외 처리 고급 -->
+<script>
+  //예외 정보 출력하기
+  try {
+    const array = new Array(99999999999999)
+  } catch (exception) {
+    console.log(exception)
+    console.log()
+    console.log(`exception name: ${exception.name}`)
+    console.log(`exception message: ${exception.message}`)
+  }
+</script>

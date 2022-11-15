@@ -1,0 +1,24 @@
+<!-- 객체의 속성과 메소드 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>library_sample</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const books = [{
+      name:'씨',
+      price:1800,
+      publisher:'위키북스'
+    },{
+      name:'이런',
+      price:1500,
+      publisher:'위키북스'
+    },]
+    const output = _.sortBy(books,(book)=> book.price)
+    console.log(JSON.stringify(output,null,2))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
